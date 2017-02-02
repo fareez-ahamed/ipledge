@@ -22,3 +22,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->defineAs(App\Pledge::class, 'traffic', function() {
+
+    return [
+        'name'        => 'traffic',
+        'pledge'      => 'I pledge to obey traffic rules',
+        'description' => 'Pledge for traffic',
+        'default'     => true
+    ];
+});
